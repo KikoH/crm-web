@@ -18,6 +18,13 @@ loop do                                             # Server runs forever
   end
   puts lines                                        # Output the full request to stdout
 	
+	filename = lines[0].gsub(/GET \//),gsub(/\ HTTP.*/, '')
+
+	if File.exists?(filename)
+		response = File.read(filname)
+	else
+		response = "File Not Found"
+	end
 
 
   client.puts(response)
