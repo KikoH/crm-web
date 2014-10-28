@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'contact'
 
 get '/' do
 	@crm_app_name = "My CRM"
