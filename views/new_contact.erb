@@ -1,9 +1,21 @@
-<h1 id="new_contact">Create new Contact</h1>
+<h1 class="menu_header">Create new Contact</h1>
 
-<form action="/contacts" method="post">
-  <input type="text" name="first_name">
-  <input type="text" name="last_name">
-  <input type="text" name="email">
-  <input type="text" name="note">
-  <input type="submit" name="Submit">
-</form>
+	<form class="new_contact" action="/contacts" method="post">
+	<label>
+		First Name
+  		<input type="text" name="first_name" placeholder="Enter First Name">
+	</label>
+	<label>
+		Last Name
+  		<input type="text" name="last_name" placeholder="Enter Last Name">
+	</label>
+	<label>
+		Email
+  		<input type="text" name="email" placeholder="Enter Email">
+	</label>
+	<label>
+		Note
+  		<input type="text" name="note" placeholder="Enter Note">
+	</label>
+  		<input type="submit" name="Submit">
+	</form>
