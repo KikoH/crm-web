@@ -97,6 +97,7 @@ ul {
 .all_contacts th {
 	color: black;
 	height: 50px;
+	width: 200px;
 	font-size: 20px;
 }
 
@@ -104,22 +105,16 @@ ul {
 	color: black;
 	width: 200px;
 	text-align: center;
-	background-color: gray;
 	padding-top: 10px;
 }
 
-.all_contacts td:nth-child(1) {
-	background-color: gray;
-	height: 40px;
-}
 
-.all_contacts td:nth-child(3) {
-	background-color: gray;
-}
-
-.all_contacts td:nth-child(5) {
+.all_contacts tr:nth-child(even) {
 	background-color: green;
-	font-size: 20px;
+}
+
+#delete {
+	background-color: green;
 }
 
 .new_contact {
