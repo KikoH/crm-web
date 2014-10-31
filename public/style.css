@@ -101,19 +101,25 @@ ul {
 }
 
 .all_contacts td {
-	color: red;
+	color: black;
 	width: 200px;
 	text-align: center;
-	background-color: green;
+	background-color: gray;
+	padding-top: 10px;
 }
 
 .all_contacts td:nth-child(1) {
-	background-color: blue;
+	background-color: gray;
 	height: 40px;
 }
 
 .all_contacts td:nth-child(3) {
-	background-color: blue;
+	background-color: gray;
+}
+
+.all_contacts td:nth-child(5) {
+	background-color: green;
+	font-size: 20px;
 }
 
 .new_contact {

@@ -3,7 +3,6 @@ require './rolodex'
 require 'sinatra'
 
 $rolodex = Rolodex.new
-$rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 get '/' do
 	# @crm_app_name = "My CRM"
@@ -27,7 +26,7 @@ get '/contacts/:id' do
 	end
 end
 
-get '/contacts/:id/edit'
+get '/contacts/:id/edit' do
 	@contact = $rolodex.find(params[:id].to_i)
 	if @contact
 		erb :edit_contact
@@ -44,6 +43,16 @@ put "/contacts/:id" do
     @contact.email = params[:email]
     @contact.note = params[:note]
 
+    redirect to("/contacts")
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+delete "/contacts/:id" do
+  @contact = $rolodex.find(params[:id].to_i)
+  if @contact
+    $rolodex.remove_contact(@contact)
     redirect to("/contacts")
   else
     raise Sinatra::NotFound
